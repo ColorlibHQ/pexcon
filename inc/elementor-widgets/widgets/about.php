@@ -93,7 +93,7 @@ class Pexcon_About extends Widget_Base {
                         'name'  => 'item_icon',
                         'label'     => __( 'Select Item Icon', 'pexcon' ),
                         'type'      => Controls_Manager::ICON,
-                        'default'   => 'fa fa-book',
+                        'default'   => 'fa-solid fa-book',
                         'options'   => pexcon_themify_icon()
                     ],
                     [
@@ -113,12 +113,12 @@ class Pexcon_About extends Widget_Base {
                 ],
                 'default' => [
                     [
-                        'item_icon'     => 'fa fa-book',
+                        'item_icon'     => 'fa-solid fa-book',
                         'item_title'     => __( 'Certified Company', 'pexcon' ),
                         'item_txt'       => __( 'Be man air male shall under create light together grass fly dat also also his brought itself air abundantly', 'pexcon' ),
                     ],
                     [
-                        'item_icon'     => 'fa fa-briefcase',
+                        'item_icon'     => 'fa-solid fa-briefcase',
                         'item_title'     => __( 'Experience Employee', 'pexcon' ),
                         'item_txt'       => __( 'Be man air male shall under create light together grass fly dat also also his brought itself air abundantly', 'pexcon' ),
                     ],

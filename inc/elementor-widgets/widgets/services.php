@@ -80,7 +80,7 @@ class Pexcon_Services extends Widget_Base {
                         'name'  => 'item_icon',
                         'label'     => __( 'Select Item Icon', 'pexcon' ),
                         'type'      => Controls_Manager::ICON,
-                        'default'   => 'fa fa-book',
+                        'default'   => 'fa-solid fa-book',
                         'options'   => pexcon_themify_icon()
                     ],
                     [
@@ -116,21 +116,21 @@ class Pexcon_Services extends Widget_Base {
                 ],
                 'default' => [
                     [
-                        'item_icon'     => 'fa fa-book',
+                        'item_icon'     => 'fa-solid fa-book',
                         'item_title'     => __( 'Good Future', 'pexcon' ),
                         'item_txt'       => __( 'Set have great you male grasses yielding yielding first their to called deep abundantly Set have great you male', 'pexcon' ),
                         'btn_label'      => 'read more',
                         'btn_url'        => '#',
                     ],
                     [
-                        'item_icon'     => 'fa fa-book',
+                        'item_icon'     => 'fa-solid fa-book',
                         'item_title'     => __( 'Qualified Trainers', 'pexcon' ),
                         'item_txt'       => __( 'Set have great you male grasses yielding yielding first their to called deep abundantly Set have great you male', 'pexcon' ),
                         'btn_label'      => 'read more',
                         'btn_url'        => '#',
                     ],
                     [
-                        'item_icon'     => 'fa fa-book',
+                        'item_icon'     => 'fa-solid fa-book',
                         'item_title'     => __( 'Job Oppurtunity', 'pexcon' ),
                         'item_txt'       => __( 'Set have great you male grasses yielding yielding first their to called deep abundantly Set have great you male', 'pexcon' ),
                         'btn_label'      => 'read more',

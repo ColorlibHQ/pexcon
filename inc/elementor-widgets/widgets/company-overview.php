@@ -62,7 +62,7 @@ class Pexcon_Company_Overview extends Widget_Base {
                         'name'  => 'item_icon',
                         'label'     => __( 'Select Item Icon', 'pexcon' ),
                         'type'      => Controls_Manager::ICON,
-                        'default'   => 'fa fa-book',
+                        'default'   => 'fa-solid fa-book',
                         'options'   => pexcon_themify_icon()
                     ],
                     [
@@ -89,25 +89,25 @@ class Pexcon_Company_Overview extends Widget_Base {
                 ],
                 'default' => [
                     [
-                        'item_icon'     => 'fa fa-book',
+                        'item_icon'     => 'fa-solid fa-book',
                         'count_val'     => __( '60', 'pexcon' ),
                         'first_line'    => __( 'Satisfied', 'pexcon' ),
                         'sec_line'      => __( 'Clients', 'pexcon' ),
                     ],
                     [
-                        'item_icon'     => 'fa fa-book',
+                        'item_icon'     => 'fa-solid fa-book',
                         'count_val'     => __( '30', 'pexcon' ),
                         'first_line'    => __( 'Worldwide', 'pexcon' ),
                         'sec_line'      => __( 'Branches', 'pexcon' ),
                     ],
                     [
-                        'item_icon'     => 'fa fa-book',
+                        'item_icon'     => 'fa-solid fa-book',
                         'count_val'     => __( '90', 'pexcon' ),
                         'first_line'    => __( 'Total', 'pexcon' ),
                         'sec_line'      => __( 'Projects', 'pexcon' ),
                     ],
                     [
-                        'item_icon'     => 'fa fa-book',
+                        'item_icon'     => 'fa-solid fa-book',
                         'count_val'     => __( '80', 'pexcon' ),
                         'first_line'    => __( 'Work', 'pexcon' ),
                         'sec_line'      => __( 'Finished', 'pexcon' ),
