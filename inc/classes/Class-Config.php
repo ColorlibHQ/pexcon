@@ -233,7 +233,7 @@
 						'handler'		=> 'pexcon-custom',
 						'file' 			=> $jsPath.'custom.js',
 						'dependency' 	=> array( 'masonry', 'pexcon-ui-js' ),
-						'version' 		=> $this->pexcon_version . '-s2',
+						'version' 		=> $this->pexcon_version . '-s3',
 						'in_footer' 	=> true
 					),
 

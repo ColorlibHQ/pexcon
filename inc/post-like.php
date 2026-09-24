@@ -14,6 +14,7 @@ function pexcon_sl_enqueue_scripts() {
 
 	wp_localize_script( 'pexcon-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'like'    => esc_html__( 'Like', 'pexcon' ),
 		'unlike'  => esc_html__( 'Unlike', 'pexcon' )
 	) );
 }
