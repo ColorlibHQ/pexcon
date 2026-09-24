@@ -278,11 +278,16 @@ class Pexcon_Company_Overview extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-            $('.counter').counterUp({
-                time: 2000
-            });
-        })(jQuery);
+        (function () {
+            function run() {
+                window.ColorlibUI && window.ColorlibUI.counter('.counter', { time: 2000 });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }
