@@ -192,25 +192,37 @@ class Pexcon_Projects extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-            $(window).on('load', function() {
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                var grids = [];
                 if (document.getElementById('portfolio')) {
-                    var $workGrid = $('.portfolio-grid').isotope({
+                    grids = UI.isotope('.portfolio-grid', {
                         itemSelector: '.all',
                     });
                 }
-            
-                $('.portfolio-filter ul li').on('click', function() {
-                    $('.portfolio-filter ul li').removeClass('active');
-                    $(this).addClass('active');
-                
-                    var data = $(this).attr('data-filter');
-                    $workGrid.isotope({
-                        filter: data
+
+                var items = UI.toElements('.portfolio-filter ul li');
+                items.forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        items.forEach(function (li) { li.classList.remove('active'); });
+                        item.classList.add('active');
+
+                        var data = item.getAttribute('data-filter');
+                        grids.forEach(function (grid) {
+                            grid.arrange({ filter: data });
+                        });
                     });
                 });
-            });
-        })(jQuery);
+            }
+            // Isotope lays out once the images have loaded.
+            if (document.readyState === 'complete') {
+                run();
+            } else {
+                window.addEventListener('load', run);
+            }
+        })();
         </script>
         <?php 
         }

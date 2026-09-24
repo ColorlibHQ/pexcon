@@ -294,15 +294,13 @@ if ( !class_exists( 'Pexcon_El_Widgets' ) ) {
             // googleapis js
             wp_register_script( 'maps-googleapis', '//maps.googleapis.com/maps/api/js?key='.esc_attr( $apiKey ) );
 
-            // ajaxchimp js
-            wp_enqueue_script( 'jquery-ajaxchimp', PEXCON_DIR_ELEMENTOR . 'assets/js/jquery.ajaxchimp.min.js', array('jquery'), '1.0', true );
 
 
             // pexcon map custom js
-            wp_register_script( 'pexcon-map-custom', PEXCON_DIR_ELEMENTOR . 'assets/js/map-custom.js', array('jquery'), '1.0', true );
+            wp_register_script( 'pexcon-map-custom', PEXCON_DIR_ELEMENTOR . 'assets/js/map-custom.js', array(), '1.0-s2', true );
 
             // pexcon companion main js
-            wp_enqueue_script( 'pexcon', PEXCON_DIR_ELEMENTOR . 'assets/js/pexcon-companion-main.js', array( 'jquery', 'jquery-ui-datepicker' ), '1.0', true );
+            wp_enqueue_script( 'pexcon', PEXCON_DIR_ELEMENTOR . 'assets/js/pexcon-companion-main.js', array( 'pexcon-ui-js' ), '1.0-s2', true );
 
 
             wp_localize_script( 'pexcon', 'ajax_object',

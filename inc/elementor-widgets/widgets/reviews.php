@@ -305,40 +305,46 @@ class Pexcon_Reviews extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-            var review_part_cotent = $('.review_part_cotent');
-            if (review_part_cotent.length) {
-                review_part_cotent.owlCarousel({
-                items: 2,
-                loop: true,
-                dots: false,
-                autoplay: true,
-                margin: 40,
-                autoplayHoverPause: true,
-                autoplayTimeout: 5000,
-                nav: true,
-                navText: ['<span class="flaticon-left-arrow"></span>','<span class="flaticon-arrow-pointing-to-right"></span>'],
-                responsive: {
-                    0: {
-                    nav: false,
-                    items: 1
-                    },
-                    575: {
-                    nav: false,
-                    items: 2
-                    },
-                    991: {
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                UI.owl('.review_part_cotent', {
+                    items: 2,
+                    loop: true,
+                    dots: false,
+                    autoplay: true,
+                    margin: 40,
+                    autoplayHoverPause: true,
+                    autoplayTimeout: 5000,
                     nav: true,
-                    items: 1
-                    },
-                    1200: {
-                    nav: true,
-                    items: 2
-                    },
-                }
+                    navText: ['<span class="flaticon-left-arrow"></span>','<span class="flaticon-arrow-pointing-to-right"></span>'],
+                    responsive: {
+                        0: {
+                        nav: false,
+                        items: 1
+                        },
+                        575: {
+                        nav: false,
+                        items: 2
+                        },
+                        991: {
+                        nav: true,
+                        items: 1
+                        },
+                        1200: {
+                        nav: true,
+                        items: 2
+                        },
+                    }
                 });
             }
-        })(jQuery);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }
