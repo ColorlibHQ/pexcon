@@ -180,7 +180,7 @@
 						'handler'		=> 'pexcon-flaticon',
 						'file' 			=> $cssPath.'flaticon.css',
 						'dependency' 	=> array(),
-						'version' 		=> '1.0',
+						'version' 		=> '1.0-s3',
 					),
 					array(
 						'handler'		=> 'pexcon-magnific-popup-css',
@@ -204,7 +204,7 @@
 						'handler'		=> 'pexcon-style-css',
 						'file' 			=> $cssPath.'style.css',
 						'dependency' 	=> array(),
-						'version' 		=> '1.0',
+						'version' 		=> '1.0-s3',
 					),
 					
 					array(
